@@ -1,0 +1,28 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Status</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>設備狀態</h1>
+    <div id="status"></div>
+
+    <script>
+        function updateStatus() {
+            $.getJSON('/status_return', function(data) {
+                $('#status').empty();
+                $.each(data, function(device_id, info) {
+                    $('#status').append('<p>' + device_id + ': ' + info.status + ' (' + info.timestamp + ')</p>');
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            updateStatus();
+            setInterval(updateStatus, 500);  // 更新每5秒
+        });
+    </script>
+</body>
+</html>
