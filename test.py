@@ -15,11 +15,11 @@ class FileUploader:
         self.server_url = self._build_server_url()
         self.files_upload_ip = self._build_files_upload_ip()
         self.status_ip = self._build_status_ip()
-        self.directory = os.path.join(os.getcwd(), "out", folder)
+        self.directory = os.path.join("/home/led/project/Basic-edge-server", "out", folder)
 
     def _build_server_url(self):
         server_ip = "127.0.0.1"
-        server_port = "9999"
+        server_port = "9997"
         return f"http://{server_ip}:{server_port}"
 
     def _build_files_upload_ip(self):
@@ -49,6 +49,8 @@ class FileUploader:
 
     def _upload(self, file, filename):
         try:
+            # 'http://127.0.0.1:9997/input/Sound1/out/2023-10-25-12-15-57/'
+            # 'http://127.0.0.1:9997/input/233/B/'
             response = requests.post(self.files_upload_ip, files={'file': file})
             if response.status_code == 200:
                 print(f"成功上傳 {filename}!")
