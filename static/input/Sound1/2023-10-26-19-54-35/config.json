@@ -1,0 +1,37 @@
+{
+    "Personal Information": {
+        "age": 70,
+        "gender": 1,
+        "blood_type": 1,
+        "height": 170,
+        "weight": 70,
+        "walking_stick": 0,
+        "surgery": 0,
+        "prosthesis": 0,
+        "activity": 30
+    },
+    "path": {
+        "output_dir": "out",
+        "input_dir": "data",
+        "output_dir-final": "2023-10-26 19-54-35",
+        "output_data_filename": "Experiment_results"
+    },
+    "set": {
+        "handle_time_out": 10
+    },
+    "edge": {
+        "edge_type": 1
+    },
+    "Audio": {
+        "sampling_rate": 44100,
+        "play_filename": "play.wav",
+        "record_filename": "record.wav",
+        "record_duration": 5
+    },
+    "mmwave": {},
+    "mediapipe_detail": {},
+    "mediapipe": {
+        "frame_data": "pose_data.json",
+        "video": "walk_video.avi"
+    }
+}

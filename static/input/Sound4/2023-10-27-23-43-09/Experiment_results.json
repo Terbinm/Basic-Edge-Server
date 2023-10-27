@@ -1,0 +1,17 @@
+{
+    "experiment_time_result": 1698421389.0758734,
+    "play_result": [
+        1698421389.0761278,
+        1698421394.0551212
+    ],
+    "record_result": [
+        1698421389.0763474,
+        1698421394.1206071
+    ],
+    "is_play_finish": true,
+    "is_record_finish": true,
+    "process_status": {
+        "Experiment": "Audio",
+        "process_handle_results": 200
+    }
+}

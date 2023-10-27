@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music</title>
+</head>
+<body>
+    {% for file in music_files %}
+    <p>{{ file }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename=file) }}" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <br/>
+    {% endfor %}
+</body>
+</html>
